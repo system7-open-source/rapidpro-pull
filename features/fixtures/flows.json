@@ -1,0 +1,63 @@
+{
+  "count": 4,
+  "next": null,
+  "previous": null,
+  "results": [
+    {
+      "uuid": "1e-d9",
+      "archived": true,
+      "expires": 60,
+      "name": "IMAM Program1",
+      "labels": [
+        "IMAM1"
+      ],
+      "runs": 1,
+      "completed_runs": 1,
+      "rulesets": [
+      ],
+      "created_on": "2012-10-10T12:44:19.596000Z"
+    },
+    {
+      "uuid": "2d-33",
+      "archived": true,
+      "expires": 60,
+      "name": "IMAM Program2",
+      "labels": [
+        "IMAM2"
+      ],
+      "runs": 2,
+      "completed_runs": 1,
+      "rulesets": [
+      ],
+      "created_on": "2013-10-10T12:44:19.596000Z"
+    },
+    {
+      "uuid": "30-0e",
+      "archived": true,
+      "expires": 60,
+      "name": "IMAM Program3",
+      "labels": [
+        "IMAM3"
+      ],
+      "runs": 3,
+      "completed_runs": 1,
+      "rulesets": [
+      ],
+      "created_on": "2014-10-10T12:44:19.596000Z"
+    },
+    {
+      "uuid": "4d-33",
+      "archived": true,
+      "expires": 60,
+      "name": "IMAM Program4",
+      "labels": [
+        "IMAM4"
+      ],
+      "runs": 5,
+      "completed_runs": 1,
+      "rulesets": [
+      ],
+      "created_on": "2015-10-10T12:44:19.596000Z"
+    }
+  ]
+}

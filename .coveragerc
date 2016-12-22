@@ -1,0 +1,6 @@
+[run]
+source = rapidpropull  ; ignored by pytest-cov but set for consistence
+branch = True
+
+[report]
+show_missing = True

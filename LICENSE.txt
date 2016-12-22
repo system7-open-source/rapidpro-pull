@@ -1,0 +1,5 @@
+Copyright (c) 2016 Tomasz J. Kotarba, SYSTEM7 LIMITED.
+All rights reserved.
+
+GPL 3
+
