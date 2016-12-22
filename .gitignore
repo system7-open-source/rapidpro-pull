@@ -1,0 +1,13 @@
+*.pyc
+.tox
+.idea
+*.egg
+*.egg-info
+*.eggs
+*.log
+*.pid
+*.coverage
+*.cache
+htmlcov
+dist
+build
