@@ -129,7 +129,7 @@ The unit tests are found in the tests/ directory.  To execute them::
 
 Contact
 -------
-Please use feel free to use this project issue tracker where appropriate, fork
+Please feel free to use this project issue tracker where appropriate, fork
 this repository and generate pull requests.  The author can also be contacted
 via e-mail_: Tomasz J. Kotarba <tomasz@kotarba.net>.
 
