@@ -1,5 +1,9 @@
 import subprocess
+import platform
+import os
+import tempfile
 import shlex
+import re
 import json
 
 # noinspection PyPackageRequirements
@@ -14,6 +18,28 @@ __email__ = 'tomasz@kotarba.net'
 
 program_name = 'rapidpro-pull'
 
+def convert_database_urls_to_platform(to_convert):
+    """Make URLs like sqlite:////tmp/... compatible with Windows."""
+    if 'sqlite:////tmp/' in to_convert and 'Windows' in platform.system():
+        split = re.split(r'(sqlite://[^\s]+)', to_convert)
+        tmp = tempfile.gettempdir()
+        if '\\' in os.sep:
+            sep = os.sep * 2
+            tmp = tmp.replace('\\', '\\\\')
+        else:
+            sep = os.sep
+        for i in range(len(split)):
+            if split[i].startswith('sqlite:////tmp/'):
+                dir_substituted = re.sub(r'sqlite:////tmp([^\s]+)',
+                                         r'sqlite:///{}\1'.format(tmp),
+                                         split[i])
+                slashes_substituted = re.sub('/',
+                                             sep,
+                                             dir_substituted)
+                split[i] = 'sqlite:///' + slashes_substituted[10:] 
+        return ''.join(split)
+    else:
+        return to_convert
 
 def _help_printed(stdout, stderr):
     if isinstance(stdout, file):
@@ -45,7 +71,10 @@ def help_should_not_be_printed(stdout, stderr):
 
 
 def run_from_cli(parameters=''):
-    popenargs = shlex.split('{} {}'.format(program_name, parameters))
+    if 'Windows' in platform.system():
+        popenargs = '{} {}'.format(program_name, parameters)
+    else:
+        popenargs = shlex.split('{} {}'.format(program_name, parameters))
     popen = subprocess.Popen(popenargs,
                              universal_newlines=True,
                              stdout=subprocess.PIPE,
@@ -202,6 +231,9 @@ def step_impl(context, options):
             token = '-t {}'.format(context.rapidpro_server.get_invalid_token())
     else:
         token = ''
+    # make sure URLs like sqlite:////tmp/... (if present) work on Windows
+    options = convert_database_urls_to_platform(options)
+
     parameters = '{token} -a {address} {options}'.format(address=address,
                                                          token=token,
                                                          options=options)

@@ -8,6 +8,7 @@
 *.pid
 *.coverage
 *.cache
+*.swp
 htmlcov
 dist
 build

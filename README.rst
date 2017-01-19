@@ -2,6 +2,26 @@
 rapidpro-pull
 =============
 
+.. image:: https://img.shields.io/pypi/v/rapidpro-pull.svg
+           :target: https://pypi.python.org/pypi/rapidpro-pull
+           :alt: Release on PyPI
+
+.. image:: https://img.shields.io/scrutinizer/g/system7-open-source/rapidpro-pull.svg
+           :target: https://scrutinizer-ci.com/g/system7-open-source/rapidpro-pull/?branch=master
+           :alt: Code Quality (Scrutinizer)
+
+.. image:: https://landscape.io/github/system7-open-source/rapidpro-pull/master/landscape.svg?style=flat
+   :target: https://landscape.io/github/system7-open-source/rapidpro-pull/master
+   :alt: Code Health (Landscape / Prospector)
+
+.. image:: https://ci.appveyor.com/api/projects/status/github/system7-open-source/rapidpro-pull?branch=master&svg=true
+           :target: https://ci.appveyor.com/project/system7-open-source/rapidpro-pull
+           :alt: Continuous Integration Testing (Windows)
+
+.. image:: https://travis-ci.org/system7-open-source/rapidpro-pull.svg?branch=master
+           :target: https://travis-ci.org/system7-open-source/rapidpro-pull
+           :alt: Continuous Integration Testing (Linux & MacOS)
+
 `rapidpro-pull`_ is an open-source command-line tool for pulling data from
 `RapidPro`_ servers, printing it in the JSON format and caching it in local or
 remote relational databases (any database supported by `SQLAlchemy`_ - e.g.

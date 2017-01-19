@@ -1,0 +1,12 @@
+pep8:
+  full: true
+doc-warnings: true
+test-warnings: false
+strictness: veryhigh
+max-line-length: 80
+autodetect: true
+ignore-paths:
+  - features
+  - tests
+python-targets:
+  - 2

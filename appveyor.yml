@@ -1,0 +1,23 @@
+environment:
+  matrix:
+    - PYTHON: "C:\\Python27-x64"
+      TOX_ENV: "py27"
+    # TODO: add support for pypy
+
+install:
+  - "%PYTHON%/Scripts/pip install .[development]"
+
+build: off
+
+test_script:
+  - "%PYTHON%/Scripts/tox -e %TOX_ENV%"
+
+on_success:
+    # Report coverage results to codecov.io
+    # and export tox environment variables
+    - "%PYTHON%/Scripts/pip install codecov"
+    - set OS=WINDOWS
+    - "%PYTHON%/Scripts/codecov -e TOX_ENV OS"
+
+artifacts:
+  - path: dist\*

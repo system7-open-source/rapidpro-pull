@@ -113,7 +113,7 @@ class Endpoints(object):
 
 class RapidProServerMock(HTTPMock):
     def __init__(self, port='8888', path='/api/v1', hostname='127.0.0.1',
-                 server_logfile=None):
+                 server_logfile=None, timeout=3600):
         self.hostname = hostname
         self.port = port
         self.path = path
@@ -125,7 +125,8 @@ class RapidProServerMock(HTTPMock):
         self.start_pretenders_server()
         time.sleep(2)  # wait for the server to start
         super(RapidProServerMock, self).__init__('localhost', '8888',
-                                                 name='rapidpro')
+                                                 name='rapidpro',
+                                                 timeout=timeout)
         self.reset_presets()
 
     @staticmethod

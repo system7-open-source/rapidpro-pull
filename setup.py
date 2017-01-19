@@ -1,5 +1,5 @@
-"""A setuptools based setup module.
-"""
+"""A setuptools based setup module."""
+
 # To use a consistent encoding
 import codecs
 import os
@@ -81,6 +81,7 @@ tests_require = [
     'pytest>=3,<4',
     'pytest-cov>=2.4,<3',
     'pytz>=2016.7',
+    'tox-travis',
 ]
 
 
