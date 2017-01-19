@@ -147,14 +147,30 @@ The unit tests are found in the tests/ directory.  To execute them::
     $ python setup.py test  #  an alias for pytest
     $ py.test  #  an alternative way of running tests, please see: py.test -h
 
+Alternatively, to run all tests on all supported implementations and versions of
+Python, one can just execute the following command::
+
+    $ tox
+
+Continuous Integration
+----------------------
+
+We use tox together with various continuous integration services to analyse the
+code quality and test rapidpro-pull on all supported platforms (Linux, MacOS,
+Windows) and on all supported implementations and versions of Python.  The
+status of the current stable release can be easily checked by looking at the
+status badges at the top of this document (`rapidpro-pull`_).
+
 Contact
 -------
+
 Please feel free to use this project issue tracker where appropriate, fork
 this repository and generate pull requests.  The author can also be contacted
 via e-mail_: Tomasz J. Kotarba <tomasz@kotarba.net>.
 
 Special Thanks
 --------------
+
 Special thanks to Robert Johnston (a crusading saint of UNICEF, always ready to
 fight dragons to save those in need) without whom this project would never be.
 
