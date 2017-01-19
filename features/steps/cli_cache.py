@@ -64,7 +64,7 @@ def step_impl(context, db_url):
     :type context: behave.runner.Context
     :type db_url: str
     """
-    context.database_url = db_url
+    context.database_url = convert_database_urls_to_platform(db_url)
     database_engine = sqlalchemy.create_engine(context.database_url)
     Base.metadata.bind = database_engine
     Base.metadata.drop_all(database_engine)
