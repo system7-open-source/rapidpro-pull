@@ -22,6 +22,12 @@ rapidpro-pull
            :target: https://travis-ci.org/system7-open-source/rapidpro-pull
            :alt: Continuous Integration Testing (Linux & MacOS)
 
+.. image:: https://coveralls.io/repos/github/system7-open-source/rapidpro-pull/badge.svg?branch=master
+           :target: https://coveralls.io/github/system7-open-source/rapidpro-pull?branch=master
+
+.. image:: https://codecov.io/gh/system7-open-source/rapidpro-pull/branch/master/graph/badge.svg
+           :target: https://codecov.io/gh/system7-open-source/rapidpro-pull
+
 `rapidpro-pull`_ is an open-source command-line tool for pulling data from
 `RapidPro`_ servers, printing it in the JSON format and caching it in local or
 remote relational databases (any database supported by `SQLAlchemy`_ - e.g.
