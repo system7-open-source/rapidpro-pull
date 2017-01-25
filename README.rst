@@ -6,7 +6,7 @@ rapidpro-pull
            :target: https://pypi.python.org/pypi/rapidpro-pull
            :alt: Release on PyPI
 
-.. image:: https://img.shields.io/scrutinizer/g/system7-open-source/rapidpro-pull.svg
+.. image:: https://img.shields.io/scrutinizer/g/system7-open-source/rapidpro-pull/master.svg
            :target: https://scrutinizer-ci.com/g/system7-open-source/rapidpro-pull/?branch=master
            :alt: Code Quality (Scrutinizer)
 
@@ -15,7 +15,7 @@ rapidpro-pull
    :alt: Code Health (Landscape / Prospector)
 
 .. image:: https://ci.appveyor.com/api/projects/status/github/system7-open-source/rapidpro-pull?branch=master&svg=true
-           :target: https://ci.appveyor.com/project/system7-open-source/rapidpro-pull
+           :target: https://ci.appveyor.com/project/system7-open-source/rapidpro-pull?branch=master
            :alt: Continuous Integration Testing (Windows)
 
 .. image:: https://travis-ci.org/system7-open-source/rapidpro-pull.svg?branch=master
@@ -114,6 +114,28 @@ rapidpro-pull -t a-token --contacts --uuid=a --uuid=b --uuid=c
 Development
 -----------
 
+.. image:: https://img.shields.io/scrutinizer/g/system7-open-source/rapidpro-pull/develop.svg
+           :target: https://scrutinizer-ci.com/g/system7-open-source/rapidpro-pull/?branch=develop
+           :alt: Code Quality (Scrutinizer)
+
+.. image:: https://landscape.io/github/system7-open-source/rapidpro-pull/develop/landscape.svg?style=flat
+   :target: https://landscape.io/github/system7-open-source/rapidpro-pull/develop
+   :alt: Code Health (Landscape / Prospector)
+
+.. image:: https://ci.appveyor.com/api/projects/status/github/system7-open-source/rapidpro-pull?branch=develop&svg=true
+           :target: https://ci.appveyor.com/project/system7-open-source/rapidpro-pull?branch=develop
+           :alt: Continuous Integration Testing (Windows)
+
+.. image:: https://travis-ci.org/system7-open-source/rapidpro-pull.svg?branch=develop
+           :target: https://travis-ci.org/system7-open-source/rapidpro-pull
+           :alt: Continuous Integration Testing (Linux & MacOS)
+
+.. image:: https://coveralls.io/repos/github/system7-open-source/rapidpro-pull/badge.svg?branch=develop
+           :target: https://coveralls.io/github/system7-open-source/rapidpro-pull?branch=develop
+
+.. image:: https://codecov.io/gh/system7-open-source/rapidpro-pull/branch/develop/graph/badge.svg
+           :target: https://codecov.io/gh/system7-open-source/rapidpro-pull
+
 Working on `rapidpro-pull`_ requires the installation of a small number of
 development dependencies (in addition to the dependencies required to just run
 the program).  These dependencies are listed in tests_require in the setup.py
@@ -130,7 +152,7 @@ To use the alternative ways of running tests one needs to explicitly install
 the aforementioned additional dependencies (this step is optional and not
 required to run tests)::
 
-    $ pip install rapidpro-pull[development]
+    $ pip install --editable .[development]
 
 The project has been developed using the BDD / outside-in TDD approach and
 there are two separate groups of tests: features and scenarios describing the
@@ -165,7 +187,8 @@ We use tox together with various continuous integration services to analyse the
 code quality and test rapidpro-pull on all supported platforms (Linux, MacOS,
 Windows) and on all supported implementations and versions of Python.  The
 status of the current stable release can be easily checked by looking at the
-status badges at the top of this document (`rapidpro-pull`_).
+status badges at the top of this document (`rapidpro-pull`_).  For developers,
+the status of the develop branch is displayed in the `Development`_ section.
 
 Contact
 -------
