@@ -1,23 +1,25 @@
 sudo: false
 
-os:
-  - linux
-# TODO: add osx
-
 language: python
 
-python:
-  - "pypy"
-  - "2.7"
+cache:
+  directories:
+    - $HOME/.pyenv
+
+matrix:
+  include:
+    - os: linux
+      python: pypy
+    - os: linux
+      python: 2.7
+    - os: osx
+      language: generic
 
 before_install:
-  - pip install -U pip
-  - pip install tox tox-travis
-  - which python
+  - source .travis/before_install.sh
 
 install:
-  - pip install -e .[development]
-  - which tox
+  - source .travis/install.sh
 
 script: tox
 
