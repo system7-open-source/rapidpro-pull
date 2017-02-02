@@ -95,7 +95,7 @@ with codecs.open(os.path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setuptools.setup(
     name='rapidpro-pull',
-    version='1.0.2',
+    version='1.0.3',
     description='An open-source tool to pull and cache data from RapidPro'
                 ' servers.',
     long_description=long_description,
